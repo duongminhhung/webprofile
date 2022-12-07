@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  cursor: pointer;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 350px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 400px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+</style>
+</head>
+<body>
+
+
+<a class="open-button" onclick="openForm()">Linh Khánh</a>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h2>Chat Messages</h2>
+
+    <div class="container">
+      <img src="images/meow.jpg" alt="Avatar" style="width:100%;">
+      <p>Linh có đó không? Cho tôi vay thêm 5 lít nhoé</p>
+     
+    </div>
+
+    <div class="container darker">
+      <img src="images/meow1.jpg" alt="Avatar" class="right" style="width:100%;">
+      <p>Không bạn. Tiền tháng trước bạn chưa trả tôi</p>
+      
+    </div>
+
+    <div class="container">
+      <img src="images/meow.jpg" alt="Avatar" style="width:100%;">
+      <p>Tối nay Pháp thắng tôi hứa trả bạn cả gốc lẫn lãi</p>
+      
+    </div>
+
+    <div class="container darker">
+      <img src="images/meow1.jpg" alt="Avatar" class="right" style="width:100%;">
+      <p>Không. Trả tôi tiền đi bạn</p>
+      
+    </div>
+
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+</html>

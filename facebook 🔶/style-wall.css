@@ -1,0 +1,452 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-size: 20px;
+    
+
+}
+body{
+    background-color: whitesmoke;
+}
+header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+   /* Justify-content và align-item là hai thuộc tính CSS giúp chúng ta phân phối các mục trong vùng chứa. 
+    Chúng kiểm soát cách các mục được định vị dọc theo main axis và cross axis*/
+}
+.header-container{
+    width: 100%;
+    background: white;
+    height: 100px;
+    padding: 10px;  
+
+
+
+}
+.header-wrapper{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 0 8px;
+    /*border: 1px solid black;
+*/    /*justify-content: space-between;*/
+/*    justify-content: space-between : tạo khoảng cách bằng nhau giữa các phần tử con trong div*/
+}
+
+.logoBox{
+    width: 4%; /*logo box chiếm 7%*/
+}
+.logoBox img{
+    width: 50px;
+}
+.searchBox{
+    width: 30%;
+    position: relative;
+}
+
+
+.searchBox input{
+    padding: 15px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: whitesmoke;
+}
+
+/*#background : transparent : nền của phần tử có màu trong suốt*/
+
+.iconBox2{
+    width: 70%;  
+    
+}
+
+.iconBox2 img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    float: right;
+    margin-left: 20px;
+}
+
+
+
+
+/* home center section start here */
+.home-center{
+    width: 70%;
+    margin: auto;
+    margin-top: 10px;
+    height: 1000px;
+}
+
+
+/* Information start*/
+.infor{
+    display: flex;
+}
+.infor img{
+    width: 18%;
+    border-radius: 50%;
+    position: relative; 
+    float: left;
+}
+.infor div {
+    padding-left: 30px;
+}
+
+.infor div h3{
+    font-size: 35px;
+    margin-bottom: 7px;
+}
+
+
+.createPost{
+    height: 200px;
+    background-color: white;
+
+}
+/* Information end */
+
+
+
+
+
+/*Information menu start*/
+.infor-menu{
+    margin-bottom: 20px;
+    border-top: 1px solid black;
+    background-color: white;
+}
+.infor-menu ul{
+    display: flex;
+}
+.infor-menu ul li{
+    
+    padding: 10px 20px;
+    font-weight: 300;
+    color: gray;
+    cursor: pointer;
+    font-size: 20px;
+}
+.infor-menu ul li:hover{
+    color: #3d3e42;
+}
+.infor-menu .active{
+    color: black;
+    border-bottom: 3px solid #1877f2;
+}
+/* Information menu end */
+
+
+
+/* List friend start */
+.list-friend{
+  border: 1px solid blue;
+  border-radius: 1%;
+  height: 500px;
+  margin-bottom: 20px;
+}
+
+.list-friend h3{
+ padding-left: 10px;
+}
+.main{
+  padding-left: 10px;
+  display: flex;
+  border-radius: 1%;
+}
+.card {
+   padding-right: 40px;
+}
+.card img{
+    width: 300px;
+    height: 300px;
+}
+.container { 
+  padding: 2px 16px;
+  background-color: white;
+  border: none;
+}
+.container button{
+   width: 100%;
+   padding: 5px 10px;
+   color: blue;
+   background-color: skyblue;
+   cursor: pointer;
+}
+/* List friend end */
+
+
+
+/*face-post start*/
+.face-post{
+    display: flex;
+}
+
+/*face-post left start*/
+.face-post .left{
+    
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+
+}
+.introduce{
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  
+    margin-bottom: 20px;  
+    border-radius: 5px;
+    
+}
+
+.introduce span{
+    padding-bottom: 15px;
+}
+.introduce button{
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.image{
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    
+    margin-bottom: 20px;  
+    height: 275px;
+    border-radius: 5px;
+}
+.image div{
+    display: flex;
+}
+.image div h2{
+   font-size: 25px;  
+   cursor: pointer; 
+}
+.image div span{
+    padding-left: 40%;
+    color: royalblue;    
+    cursor: pointer;
+}
+.combo-image{
+    margin-top: 10px;
+    display: flex;
+    
+}
+.combo-image div{
+    margin-bottom: 10px;
+    display: block;
+     justify-content: space-between;
+}
+
+.combo-image img{
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+
+.friend{
+    background-color: white;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    
+    margin-bottom: 20px;  
+    height: 450px;
+    border-radius: 5px;
+}
+.friend div{
+    display: flex;
+}
+.friend div h2{
+   font-size: 25px; 
+   cursor: pointer;  
+}
+.friend div span{
+    padding-left: 30%;
+    color: royalblue;   
+    cursor: pointer; 
+}
+.combo-friend{
+    margin-top: 10px;
+    display: flex;
+      justify-content: space-between;
+    
+}
+.combo-friend div{
+    margin-bottom: 10px;
+    display: block;
+     justify-content: space-between;
+}
+
+.col-friend div{
+    display: block;
+      justify-content: space-between;
+}
+
+
+.col-friend img{
+    margin-right: 5px;
+    border-radius: 5px;
+    width: 97px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*face-post left end*/
+
+
+/*face-post right start*/
+.face-post .right{
+    
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 145px;  
+    border-radius: 5px;
+}
+
+.post-text{
+    padding: 20px;
+    width: 100%;
+    position: relative;/* Cần xem lại...................*/
+    margin-bottom: 10px;
+    align-items: center;
+    border-radius: 5px;
+
+}
+
+.post-text img{
+    width: 7%;
+    border-radius: 50%;
+    position: relative; 
+    float: left;
+    /*Cần xem lại.....................*/
+    
+}
+.post-text input{
+    padding: 25px;
+    width: 90%;
+    background-color: whitesmoke;
+    border: none;
+    height: 30px;
+    border-radius: 20px;
+    float: right;
+}
+
+.post-icon{
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+
+}
+.post-icon a{
+    margin-right: 30px;
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 500;  
+    font-size: 18px;
+    box-shadow: gray;
+
+}
+
+
+
+.fb-p1-main{
+    display: flex;
+    flex-direction: column;
+     background: white;
+    padding: 15px 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+.post-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 15px 0;
+}
+.post-title img{
+    width: 50px;
+    border-radius: 50px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.post-title ul{
+    width: 87%;
+    margin-bottom: 20px;
+}
+.post-title ul li span{
+    color: gray;
+    font-weight: 400;
+    font-size: 14px;
+}
+.post-title p{
+    color: gray;
+    font-size: 20px;
+}
+.post-title p a{
+    color: #4575b3;
+}
+.post-images img{
+     width: 500px;
+     border-radius: 50%;
+     margin-left: 50px;
+}
+
+
+.like-comment{
+    width: 100%;
+    margin-top: 15px;
+}
+.like-comment ul{
+    display: flex;
+}
+.like-comment ul li{
+    margin-right: 25px;
+}
+.like-comment ul li img{
+    width: 30px;
+    margin-right: -5px;
+}
+
+.like-comment ul li span{
+    color: gray;
+    margin-left: 10px;
+    font-size: 20px;
+}

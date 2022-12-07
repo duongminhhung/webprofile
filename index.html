@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+    background: #f0f2f5;
+    font-family: Arial, sans-serif;
+}
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.title-box {
+    width: 500px;
+}
+.title-box img {
+    width: 235px;
+    margin-bottom: -10px;
+}
+.title-box p {
+    color: #000;
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 32px;
+}
+.form-box {
+    width: 350px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background: #fff;
+    margin-left: 60px;
+    box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52);
+}
+.form-box input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #eeebeb;
+    border-radius: 5px;
+    outline: none;
+}
+.form-box input:focus {
+    box-shadow: 0px 0px 1px 1px rgb(22, 111, 229);
+}
+.form-box button {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+    background: #166fe5;
+}
+.form-box button:hover {
+    background: #1877f2;
+}
+.form-box a {
+    color: #166fe5;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+.form-box a:hover {
+    text-decoration: underline;
+}
+.form-box hr {
+    border: 1px solid #dadde1;
+    margin-bottom: 15px;
+}
+.form-box .create-btn a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: #36a420;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form-box .create-btn a:hover {
+    background: #42b72a;
+}
+.content{
+    display: inline-block;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px 1px rgba(71, 71, 71, 0.52);
+
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 25px 0;
+  border: 1px solid #888;
+  width: 35%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+.modal_img{
+    display: block;
+    width:160px;
+    margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+
+}
+.avata{
+  height:160px;border-top-left-radius: 5px;border-top-right-radius: 5px;
+                    width: 160px;
+}
+/* button{margin: -3px;} */
+button {
+    margin: -8px;
+}
+    </style>
+</head>
+<body>
+ 
+    <div class="box">
+        <div class="title-box">
+          <img src="https://i.postimg.cc/NMyj90t9/logo.png" alt="Facebook">
+          <p>Facebook helps you connect and share with the people in your life.</p>
+          <div class="img">
+          
+                <button style="border:none" id="myBtn">
+                <div class="content">
+                <img style="height:160px;border-top-left-radius: 5px;border-top-right-radius: 5px;
+                    width: 160px;" src="./src/users/ahmed qadura/882385.png" alt="">
+                    <p style="font-size:18px;text-align: center;">Giang</p>
+                </div>
+              </button>
+              <button style="border:none" id="myBtn1">
+                <div class="content">
+                    <img style="height:160px;border-top-left-radius: 5px;border-top-right-radius: 5px;
+                    width: 160px;" src="./facebook 🔶/images/meow1.jpg" alt="">
+                    <p style="font-size:18px;text-align: center;">Anh</p>
+                </div>
+              </button>
+
+              <button style="border:none" id="myBtn2">
+                <div class="content">
+                    <img style="height:160px;border-top-left-radius: 5px;border-top-right-radius: 5px;
+                    width: 160px;" src="./images/meow.jpg" alt="">
+                    <p style="font-size:18px;text-align: center;">Tài</p>
+                </div>
+              </button>
+              <!-- <button style="border:none" id="myBtn2">
+                <div class="content">
+                    <img style="height:160px;border-top-left-radius: 5px;border-top-right-radius: 5px;
+                    width: 160px;" src="./images/meow.jpg" alt="">
+                    <p style="font-size:18px;text-align: center;">Giang</p>
+                </div>
+              </button> -->
+              
+              
+              
+          </div>
+        </div>
+        <div class="form-box">
+          <form action="#">
+            <input type="text" placeholder="Email address or phone number">
+            <input type="password" placeholder="Password">
+            <button type="submit">Log In</button>
+            <a href="#">Forgotten Password</a>
+          </form>
+          <hr>
+          <div class="create-btn">
+            <a href="#" target="_blank">Create New Account</a>
+          </div>
+        </div>
+      </div>
+     
+   
+    
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img class="modal_img" style="width: 160px;border-radius: 50%;" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.6435-1/42846171_1915056188799782_2064050004149927936_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=Sh1Bne27yKIAX8bvMyF&_nc_ht=scontent.fhan2-1.fna&oh=00_AfCOWJo3gafoyhhtb4QheBJ-I5YkeG1WyilKdJ4HHtiSig&oe=63AE25E6" alt="">
+          <h1 style="text-align:center;font-size: 18px;">Nguyễn Đăng Trường Giang</h1>
+          <div class="form-box" style="box-shadow: none">
+            <form action="./home/home.html">
+              <input type="password" placeholder="Password">
+              <button>ádf</button>
+          </form>
+           
+          </div>
+        </div>
+      
+      </div>
+      
+
+      <div id="myModal1" class="modal modal1">
+        <div class="modal-content">
+          <span class="close close1">&times;</span>
+          <img class="modal_img" style="width: 160px;border-radius: 50%;" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.6435-1/42846171_1915056188799782_2064050004149927936_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=Sh1Bne27yKIAX8bvMyF&_nc_ht=scontent.fhan2-1.fna&oh=00_AfCOWJo3gafoyhhtb4QheBJ-I5YkeG1WyilKdJ4HHtiSig&oe=63AE25E6" alt="">
+          <h1 style="text-align:center;font-size: 18px;">Vũ Hoàng Anh</h1>
+          <div class="form-box" style="box-shadow: none">
+            <form action="./facebook 🔶/index.html">
+              <input type="password" placeholder="Password">
+              <button type="submit">Log In</button>
+            </form>
+           
+          </div>
+        </div>
+      
+      </div>
+
+
+
+
+      <div id="myModal2" class="modal modal2">
+        <div class="modal-content">
+          <span class="close close1">&times;</span>
+          <img class="modal_img" style="width: 160px;border-radius: 50%;" src="https://scontent.fhan2-1.fna.fbcdn.net/v/t1.6435-1/42846171_1915056188799782_2064050004149927936_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-7&_nc_sid=dbb9e7&_nc_ohc=Sh1Bne27yKIAX8bvMyF&_nc_ht=scontent.fhan2-1.fna&oh=00_AfCOWJo3gafoyhhtb4QheBJ-I5YkeG1WyilKdJ4HHtiSig&oe=63AE25E6" alt="">
+          <h1 style="text-align:center;font-size: 18px;">Hữu Tài</h1>
+          <div class="form-box" style="box-shadow: none">
+            <form action="#">
+              <input type="password" placeholder="Password">
+              <button type="submit">Log In</button>
+            </form>
+           
+          </div>
+        </div>
+      
+      </div>
+      
+   
+      
+      <script>
+      var modal = document.getElementById("myModal");
+      var modal1 = document.getElementById("myModal1");
+      var modal2 = document.getElementById("myModal2");
+
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      var btn1 = document.getElementById("myBtn1");
+      var btn2 = document.getElementById("myBtn2");
+    
+      var span = document.getElementsByClassName("close")[0];
+      var span1 = document.getElementsByClassName("close1")[0];
+      // var span2 = document.getElementsByClassName("close1")[0];
+      
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+      
+  
+  
+      
+      
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+     
+      
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+      btn1.onclick = function() {
+        modal1.style.display = "block";
+      }
+  
+      
+      
+      span1.onclick = function() {
+        modal1.style.display = "none";
+      }
+      
+      window.onclick = function(event) {
+        if (event.target == modal1) {
+          modal1.style.display = "none";
+        }
+      }
+
+
+
+
+
+      btn2.onclick = function() {
+        modal2.style.display = "block";
+      }
+  
+      
+      
+      span2.onclick = function() {
+        modal2.style.display = "none";
+      }
+      
+      window.onclick = function(event) {
+        if (event.target == modal2) {
+          modal2.style.display = "none";
+        }
+      }
+
+
+
+
+    
+
+
+
+
+
+
+
+      </script>
+      
+</body>
+</html>
